@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div th:replace="common/header :: navbar" />
+
+	<div class="container-fluid" style="padding: 0">
+		<div class="row">
+			<!-- carousel -->
+			<div class="col-xs-12">
+				<div id="carousel-example-generic" class="carousel slide"
+					data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="/image/home-3-slider-1.jpg" alt="..." />
+							<div class="carousel-caption">
+								<h4>First Thumbnail Label</h4>
+								<p>Contrary to popular belief, Lorem Ipsum is not simply
+									random text. It has roots in a piece of classical Latin
+									literature from 45 BC, making it over 2000 years old.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="/image/home-3-slider-2.jpg" alt="..." />
+							<div class="carousel-caption">
+								<h4>First Thumbnail Label</h4>
+								<p>Contrary to popular belief, Lorem Ipsum is not simply
+									random text. It has roots in a piece of classical Latin
+									literature from 45 BC, making it over 2000 years old.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic"
+						role="button" data-slide="prev"> <span
+						class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a> <a class="right carousel-control" href="#carousel-example-generic"
+						role="button" data-slide="next"> <span
+						class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container faq">
+		<div class="row" style="margin: auto; width: 1120px; margin-top: 70px">
+			<div class="category-gallery-block" style="display: flex">
+				<div class="single-block hr-large" style="padding-right: 20px">
+					<img src="/image/others/cat-gal-large.png" alt="">
+				</div>
+				<div class="single-block inner-block-wrapper"
+					style="display: flex; flex-direction: column">
+					<div style="display: flex">
+						<a href="#" class="single-image mid-image"
+							style="padding-right: 20px"> <img
+							src="/image/others/cat-gal-mid.png" alt="">
+						</a> <a href="#" class="single-image small-image"> <img
+							src="/image/others/cat-gal-small.png" alt="">
+						</a>
+					</div>
+					<div style="display: flex; padding-top: 30px">
+						<a href="#" class="single-image small-image"
+							style="padding-right: 20px"> <img
+							src="/image/others/cat-gal-small-2.jpg" alt="">
+						</a> <a href="#" class="single-image mid-image"> <img
+							src="/image/others/cat-gal-mid-2.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-title section-title--bordered" style="margin: auto; width: 1120px; margin-top: 70px">
+			<h2>Featured Books</h2>
+		</div>
+
+
+		<div class="row" style="margin: auto; width: 1120px; margin-top: 20px">
+			<div id="featured-books" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#featured-books" data-slide-to="0" class="active"></li>
+					<li data-target="#featured-books" data-slide-to="1"></li>
+					<li data-target="#featured-books" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="/image/shelf.png" class="img-responsive" />
+						<div class="carousel-caption">
+							<div class="row">
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-1.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-2.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-3.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-4.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="/image/shelf.png" class="img-responsive" />
+						<div class="carousel-caption">
+							<div class="row">
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-7.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-8.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-9.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-10.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="/image/shelf.png" class="img-responsive" />
+						<div class="carousel-caption">
+							<div class="row">
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-5.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-6.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-11.jpg" />
+								</div>
+								<div class="col-xs-3">
+									<img class="img-responsive" src="/image/product/product-12.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="##featured-books"
+					role="button" data-slide="prev"> <span
+					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="##featured-books"
+					role="button" data-slide="next"> <span
+					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="row" style="margin: auto; width: 1120px; margin-top: 70px">
+			<div style="display: flex">
+				<div class="col-xl-3 col-md-6 mt--30 p-0">
+					<div class="feature-box h-100">
+						<div class="icon">
+							<i class="fas fa-shipping-fast"></i>
+						</div>
+						<div class="text">
+							<h5>Free Shipping Item</h5>
+							<p>Orders over $500</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 mt--30">
+					<div class="feature-box h-100">
+						<div class="icon">
+							<i class="fas fa-redo-alt"></i>
+						</div>
+						<div class="text">
+							<h5>Money Back Guarantee</h5>
+							<p>100% money back</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 mt--30">
+					<div class="feature-box h-100">
+						<div class="icon">
+							<i class="fas fa-piggy-bank"></i>
+						</div>
+						<div class="text">
+							<h5>Cash On Delivery</h5>
+							<p>Lorem ipsum dolor amet</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 mt--30 p-0">
+					<div class="feature-box h-10">
+						<div class="icon">
+							<i class="fas fa-life-ring"></i>
+						</div>
+						<div class="text">
+							<h5>Help &amp; Support</h5>
+							<p>Call us : + 0123.4567.89</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin: auto; width: 1120px; margin-top: 20px">
+			<div class="d-flex justify-content-space-between">
+				<div class="col-lg-6 p-0">
+					<a href="" class="promo-image promo-overlay"> <img
+						src="image/promo-banner-with-text.jpg" alt="" style="width: 97%">
+					</a>
+				</div>
+				<div class="col-lg-6 p-0">
+					<a href="" class="promo-image promo-overlay"> <img
+						src="image/promo-banner-with-text-2.jpg" alt="" style="width: 97%">
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section-title section-title--bordered"
+			style="margin: auto; width: 1120px; margin-top: 70px">
+			<h2>Client Testimonial</h2>
+		</div>
+
+		<div class="row d-flex" style="margin: auto; width: 1120px; margin-top: 70px">
+			<div class="testimonial-card d-flex" style="margin-right: 10px">
+				<div class="testimonial-image">
+					<img src="image/others/client-1.png" alt="">
+				</div>
+				<div class="testimonial-body">
+					<article>
+						<h2 class="sr-only">Testimonial Article</h2>
+						<p>Lorem Ipsum This is Photoshops version of . Proin gravida
+							nibh vel velit.Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In molestie augue magna. Pell..</p>
+						<span class="d-block client-name">Rebecka Filson</span>
+					</article>
+				</div>
+			</div>
+
+			<div class="testimonial-card d-flex" style="margin-right: 10px">
+				<div class="testimonial-image">
+					<img src="image/others/client-2.png" alt="">
+				</div>
+				<div class="testimonial-body">
+					<article>
+						<h2 class="sr-only">Testimonial Article</h2>
+						<p>Lorem Ipsum This is Photoshops version of . Proin gravida
+							nibh vel velit.Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In molestie augue magna. Pell..</p>
+						<span class="d-block client-name">Rebecka Filson</span>
+					</article>
+				</div>
+			</div>
+
+			<div class="testimonial-card">
+				<div class="testimonial-image">
+					<img src="image/others/client-3.png" alt="">
+				</div>
+				<div class="testimonial-body">
+					<article>
+						<h2 class="sr-only">Testimonial Article</h2>
+						<p>Lorem Ipsum This is Photoshops version of . Proin gravida
+							nibh vel velit.Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. In molestie augue magna. Pell..</p>
+						<span class="d-block client-name">Rebecka Filson</span>
+					</article>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section-title section-title--bordered"
+			style="margin: auto; width: 1120px; margin-top: 70px">
+			<h2>Contact</h2>
+		</div>
+		
+
+		<div class="row" style="margin: auto; width: 1120px; margin-top: 70px">
+			<div class="col-xs-4">
+				<div clas="panel panel-default">
+					<div class="panel-body">
+						<a th:href="@{/bookshelf}"><img src="/image/bestseller.png" class="img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div clas="panel panel-default">
+					<div class="panel-body">
+						<a th:href="@{/hours}"><img src="/image/hours.png" class="img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div clas="panel panel-default">
+					<div class="panel-body">
+						<a th:href="@{/faq}"><img src="/image/faq.png" class="img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+
+	</div>
+	<!-- end of container -->
+
+	<div th:replace="common/header :: footer" />
+	<div th:replace="common/header :: body-bottom-scripts" />
+</body>
+</html>
