@@ -15,7 +15,7 @@
     	<div class="row" style="margin-top: 80px;">
     	<a th:href="@{/bookshelf}" style="display: block; margin-bottom: 30px"><i class="fas fa-arrow-left"></i> Back to book list</a>
     		<div class="col-xs-3">
-    			<img class="img-responsive shelf-book" th:src="#{adminPath}+@{/image/book/}+${book.id}+'.png'" />
+    			<img class="img-responsive shelf-book" th:src="#{adminPath}+@{/image/book/}+${book.title}+'.jpg'" />
     		</div>
     		
     		<div class="col-xs-9">
