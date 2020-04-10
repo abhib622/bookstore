@@ -14,6 +14,7 @@ import com.bookstore.admin.entity.Book;
 import com.bookstore.admin.entity.CartItem;
 import com.bookstore.admin.entity.ShoppingCart;
 import com.bookstore.admin.entity.User;
+import com.bookstore.admin.repository.ShoppingCartRepository;
 import com.bookstore.admin.service.BookService;
 import com.bookstore.admin.service.CartItemService;
 import com.bookstore.admin.service.ShoppingCartService;
@@ -26,18 +27,17 @@ import com.bookstore.admin.service.UserService;
 public class ShoppinCartController {
 	
 	@Autowired
-	private UserService userService;
-	
+	private UserService userService;	
 	@Autowired
-	private CartItemService cartItemService;
-	
+	private CartItemService cartItemService;	
 	@Autowired
-	private BookService bookService;
-	
+	private BookService bookService;	
 	@Autowired
-	private ShoppingCartService shoppingCartService;
+	private ShoppingCartService shoppingCartService;	
+	@Autowired
+	private ShoppingCartRepository shoppingCartRepository;
 	
-	
+	/** fetch the shpping Cart Detail for user **/
 	@RequestMapping("/cart")
 	public String shoppingCart(Model model, Principal principal) {
 		User user = userService.findByUsername(principal.getName());
@@ -46,6 +46,7 @@ public class ShoppinCartController {
 		List<CartItem> cartItemList = cartItemService.findByShoppingCart(shoppingCart);
 		
 		shoppingCartService.updateShoppingCart(shoppingCart);
+		shoppingCartService.saveShoppingCart(shoppingCart);
 		
 		model.addAttribute("cartItemList", cartItemList);
 		model.addAttribute("shoppingCart", shoppingCart);
@@ -53,6 +54,7 @@ public class ShoppinCartController {
 		return "shoppingCart";
 	}
 	
+	/** Add the item to cart **/
 	@RequestMapping("/addItem")
 	public String addItem(
 			@ModelAttribute("book") Book book,

@@ -56,4 +56,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 		shoppingCartRepository.save(shoppingCart);
 	}
 
+	@Override
+	public ShoppingCart saveShoppingCart(ShoppingCart shoppingCart) {
+		return shoppingCartRepository.save(shoppingCart);
+	}
+
 }

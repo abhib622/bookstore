@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class ShippingAddress {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String ShippingAddressName;
 	private String ShippingAddressStreet1;

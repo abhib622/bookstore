@@ -17,6 +17,9 @@
 <!-- data table -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
 
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="icon" href="/image/applie-touch-icon.png" />
 </head>
 
@@ -51,7 +54,7 @@
 						<li><a th:href="@{/shoppingCart/cart}">
 						<i class="fa fa-cart-plus" aria-hidden="true"></i> CART</a></li>
 						<li><a sec:authorize="isAnonymous()" th:href="@{/login}"><i class="fa fa-user" aria-hidden="true"></i> LOGIN/Register</a></li>
-						<li><a sec:authorize="isAuthenticated()" th:href="@{/myProfile}">My Account</a></li>
+						<li><a sec:authorize="isAuthenticated()" th:href="@{/myProfile}"></i>ACCOUNT</a></li>
 						<li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">LOGOUT</a></li>
 					</ul>
 				</div>

@@ -1,6 +1,7 @@
 package com.bookstore.admin.entity;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -23,10 +24,17 @@ public class ShoppingCart {
 	
 	@OneToMany(mappedBy="shoppingCart", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JsonIgnore
-	private List<CartItem> cartItemList;
+	private List<CartItem> cartItemList = new ArrayList<>();
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	private User user;
+	
+	public ShoppingCart () {
+	}
+	
+	public ShoppingCart (User user) {
+		this.user = user;
+	}
 
 	public Long getId() {
 		return id;

@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bookstore.admin.Enum.RoleName;
 import com.bookstore.admin.constant.USConstants;
 import com.bookstore.admin.entity.Role;
+import com.bookstore.admin.entity.ShoppingCart;
 import com.bookstore.admin.entity.TokenVerification;
 import com.bookstore.admin.entity.User;
 import com.bookstore.admin.entity.UserRole;
@@ -197,6 +198,7 @@ public class AuthenticationController {
 		currentUser.setUsername(user.getUsername());
 		currentUser.setEmail(user.getEmail());
 		currentUser.setPhone(user.getPhone());
+		currentUser.setShoppingCart(new ShoppingCart(currentUser));
 		User savedUsaer = userService.save(currentUser);
 		
 		TokenVerification passToken = tokenVerificationRepository.findByUser(savedUsaer);
