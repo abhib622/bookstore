@@ -304,3 +304,15 @@ footer {
 	-moz-box-shadow: -2px -1px 53px -5px rgba(199, 199, 199, 1);
 	box-shadow: -2px -1px 53px -5px rgba(199, 199, 199, 1);
 }
+
+.opacity-5{
+	opacity: 0.5
+}
+
+.d-none{
+	display: none;
+}
+
+.d-block{
+	display: block;
+}

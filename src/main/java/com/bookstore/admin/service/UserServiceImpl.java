@@ -10,10 +10,14 @@ import org.springframework.stereotype.Service;
 
 import com.bookstore.admin.entity.TokenVerification;
 import com.bookstore.admin.entity.User;
+import com.bookstore.admin.entity.UserPayment;
 import com.bookstore.admin.entity.UserRole;
+import com.bookstore.admin.entity.UserShipping;
 import com.bookstore.admin.repository.TokenVerificationRepository;
+import com.bookstore.admin.repository.UserPaymentRepository;
 import com.bookstore.admin.repository.RoleRepository;
 import com.bookstore.admin.repository.UserRepository;
+import com.bookstore.admin.repository.UserShippingRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -21,7 +25,11 @@ public class UserServiceImpl implements UserService {
 private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
 	
 	@Autowired
-	private UserRepository userRepository;	
+	private UserRepository userRepository;
+	@Autowired
+	private UserShippingRepository userShippingRepository;
+	@Autowired
+	private UserPaymentRepository userPaymentRepository;
 	@Autowired
 	private RoleRepository roleRepository;
 	@Autowired
@@ -85,6 +93,18 @@ private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
 	@Override
 	public void removeUser(User user) {
 		userRepository.delete(user);
+	}
+
+	@Override
+	public UserShipping findByuserShippingId(Long id) {
+		Optional<UserShipping> userShipping = userShippingRepository.findById(id);
+		return userShipping.get();
+	}
+
+	@Override
+	public UserPayment findByuserPaymentId(Long id) {
+		Optional<UserPayment> UserPayment = userPaymentRepository.findById(id);
+		return UserPayment.get();
 	}
 	
 	

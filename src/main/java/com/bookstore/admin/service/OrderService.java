@@ -8,12 +8,8 @@ import com.bookstore.admin.entity.ShoppingCart;
 import com.bookstore.admin.entity.User;
 
 public interface OrderService {
-	Order createOrder(ShoppingCart shoppingCart,
-			ShippingAddress shippingAddress,
-			BillingAddress billingAddress,
-			Payment payment,
-			String shippingMethod,
-			User user);
+	Order createOrder(ShoppingCart shoppingCart, ShippingAddress shippingAddress, BillingAddress billingAddress,
+			Payment payment, String shippingMethod, User user);
 	
 	Order findOne(Long id);
 }

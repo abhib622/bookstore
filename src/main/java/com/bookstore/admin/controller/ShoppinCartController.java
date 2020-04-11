@@ -14,7 +14,6 @@ import com.bookstore.admin.entity.Book;
 import com.bookstore.admin.entity.CartItem;
 import com.bookstore.admin.entity.ShoppingCart;
 import com.bookstore.admin.entity.User;
-import com.bookstore.admin.repository.ShoppingCartRepository;
 import com.bookstore.admin.service.BookService;
 import com.bookstore.admin.service.CartItemService;
 import com.bookstore.admin.service.ShoppingCartService;
@@ -34,8 +33,6 @@ public class ShoppinCartController {
 	private BookService bookService;	
 	@Autowired
 	private ShoppingCartService shoppingCartService;	
-	@Autowired
-	private ShoppingCartRepository shoppingCartRepository;
 	
 	/** fetch the shpping Cart Detail for user **/
 	@RequestMapping("/cart")
@@ -69,7 +66,7 @@ public class ShoppinCartController {
 			return "forward:/bookDetail?id="+book.getId();
 		}
 		
-		CartItem cartItem = cartItemService.addBookToCartItem(book, user, Integer.parseInt(qty));
+		cartItemService.addBookToCartItem(book, user, Integer.parseInt(qty));
 		model.addAttribute("addBookSuccess", true);
 		
 		return "forward:/bookDetail?id="+book.getId();

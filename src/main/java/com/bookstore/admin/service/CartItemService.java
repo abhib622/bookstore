@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.bookstore.admin.entity.Book;
 import com.bookstore.admin.entity.CartItem;
+import com.bookstore.admin.entity.Order;
 import com.bookstore.admin.entity.ShoppingCart;
 import com.bookstore.admin.entity.User;
 
@@ -17,4 +18,6 @@ public interface CartItemService {
 	CartItem findById(Long id);
 	
 	void removeCartItem(CartItem cartItem);
+	
+	List<CartItem> findByOrder(Order order);
 }

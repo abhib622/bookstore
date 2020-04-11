@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.bookstore.admin.entity.Book;
 import com.bookstore.admin.entity.BookToCartItem;
 import com.bookstore.admin.entity.CartItem;
+import com.bookstore.admin.entity.Order;
 import com.bookstore.admin.entity.ShoppingCart;
 import com.bookstore.admin.entity.User;
 import com.bookstore.admin.repository.BookToCartItemRepository;
@@ -79,6 +80,11 @@ public class CartItemServiceImpl implements CartItemService {
 	public void removeCartItem(CartItem cartItem) {
 		bookToCartItemRepository.deleteByCartItem(cartItem);
 		cartItemRepository.delete(cartItem);
+	}
+
+	@Override
+	public List<CartItem> findByOrder(Order order) {
+		return cartItemRepository.findByOrder(order);
 	}
 
 
